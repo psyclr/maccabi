@@ -1,0 +1,9 @@
+# local
+codex_last*.txt
+
+# python
+__pycache__/
+*.pyc
+
+# misc
+.DS_Store
