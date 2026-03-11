@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <h1 data-i18n-key="title" class="brand-title">Maccabi Belarus</h1>
-        <p data-i18n-key="subtitle" class="brand-subtitle">Official national team project</p>
+  <header class="site-nav" aria-label="Top navigation">
+    <div class="container nav-inner">
+      <div class="nav-brand">
+        <h1 data-i18n-key="title" class="nav-title">Maccabi Belarus</h1>
+        <p data-i18n-key="subtitle" class="nav-sub">Official national team project</p>
       </div>
       <div class="lang-switch" aria-label="Language switch">
         <button id="lang-en" class="lang-btn" title="English">EN</button>
@@ -22,54 +22,45 @@
 
   <main>
     <section class="hero" id="hero" aria-label="Hero">
-      <div class="container hero-grid">
-        <div class="hero-card">
-          <h2 data-i18n-key="hero.heading" class="hero-heading">Maccabi Belarus</h2>
-          <p data-i18n-key="hero.text" class="hero-text"></p>
-          <div class="hero-actions" aria-label="Hero actions">
-            <a class="btn btn-primary" href="#form" data-i18n-key="hero.ctaPrimary">Join</a>
-            <a class="btn btn-outline" href="#sponsors" data-i18n-key="hero.ctaSecondary">Become a partner</a>
-          </div>
-        </div>
+      <div class="hero-media" aria-hidden="true">
+        <!-- Reference-style background video. Can be replaced later. -->
+        <iframe
+          title="Background video"
+          src="https://www.youtube.com/embed/Qrym1Lk3c1Q?autoplay=1&mute=1&controls=0&playsinline=1&loop=1&playlist=Qrym1Lk3c1Q&modestbranding=1&rel=0"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+        ></iframe>
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
 
-        <aside class="hero-side" aria-label="Quick facts">
-          <h3>MWU</h3>
-          <ul>
-            <li><span data-i18n-key="worldUnion.metrics.0.value">1921</span> — <span data-i18n-key="worldUnion.metrics.0.label">Founded</span></li>
-            <li><span data-i18n-key="worldUnion.metrics.1.value">400,000+</span> — <span data-i18n-key="worldUnion.metrics.1.label">Members</span></li>
-            <li><span data-i18n-key="worldUnion.metrics.2.value">70+</span> — <span data-i18n-key="worldUnion.metrics.2.label">Countries</span></li>
-          </ul>
-        </aside>
+      <div class="container hero-inner">
+        <div class="hero-kicker"><span class="hero-kicker-dot"></span><span>Maccabi World Union</span></div>
+        <h2 data-i18n-key="hero.heading" class="hero-title">Maccabi Belarus</h2>
+        <p data-i18n-key="hero.text" class="hero-lead"></p>
+
+        <div class="hero-actions" aria-label="Hero actions">
+          <a class="btn btn-primary" href="#form" data-i18n-key="hero.ctaPrimary">
+            <span data-i18n-key="hero.ctaPrimary">Apply</span>
+            <span class="btn-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+          <a class="btn btn-secondary" href="#sponsors" data-i18n-key="hero.ctaSecondary">
+            <span data-i18n-key="hero.ctaSecondary">Become a partner</span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="maccabi-belarus" aria-label="Maccabi Belarus">
+    <section class="section" id="about" aria-label="About">
       <div class="container grid-2">
         <div>
-          <h3 data-i18n-key="maccabiBelarus.heading" class="section-heading">Maccabi Belarus</h3>
-          <p data-i18n-key="maccabiBelarus.text" class="section-text"></p>
+          <h3 data-i18n-key="maccabiBelarus.heading" class="section-title">Maccabi Belarus</h3>
+          <p data-i18n-key="maccabiBelarus.text" class="section-sub"></p>
         </div>
-        <div class="card" aria-label="Project pillars">
-          <h3 data-i18n-key="pillars.heading" class="section-heading" style="font-size:22px">Sport, identity, international participation</h3>
-          <p data-i18n-key="pillars.text" class="section-text"></p>
-          <ul class="bullets" aria-label="Pillars list">
-            <li data-i18n-key="pillars.items.0"></li>
-            <li data-i18n-key="pillars.items.1"></li>
-            <li data-i18n-key="pillars.items.2"></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="global-link" aria-label="Global link">
-      <div class="container grid-2">
-        <div class="card">
-          <h3 data-i18n-key="globalLink.heading" class="section-heading" style="font-size:22px">Part of the global movement</h3>
-          <p data-i18n-key="globalLink.text" class="section-text"></p>
-        </div>
-        <div class="card" id="world-union" aria-label="Maccabi World Union">
-          <h3 data-i18n-key="worldUnion.heading" class="section-heading" style="font-size:22px">Maccabi World Union</h3>
-          <p data-i18n-key="worldUnion.text" class="section-text"></p>
+        <div class="card" aria-label="Maccabi World Union">
+          <h3 data-i18n-key="worldUnion.heading" class="section-title" style="font-size:22px">Maccabi World Union</h3>
+          <p data-i18n-key="worldUnion.text" class="section-sub"></p>
           <div class="metrics" aria-label="Maccabi World Union metrics">
             <div class="metric">
               <div class="metric-value" data-i18n-key="worldUnion.metrics.0.value">1921</div>
@@ -88,11 +79,27 @@
       </div>
     </section>
 
+    <section class="section alt" id="disciplines" aria-label="Disciplines">
+      <div class="container">
+        <h3 data-i18n-key="pillars.heading" class="section-title">Sport, identity, international participation</h3>
+        <p data-i18n-key="pillars.text" class="section-sub"></p>
+
+        <div class="icon-grid" aria-label="Key disciplines">
+          <div class="icon-tile"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 3l3 3-4 4-3-3 4-4z" stroke="currentColor" stroke-width="2"/><path d="M14 10l7 7-4 4-7-7 4-4z" stroke="currentColor" stroke-width="2"/></svg></div><div class="icon-label" data-i18n-key="form.sportOptions.0.label">Football</div></div>
+          <div class="icon-tile"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M3 12h18" stroke="currentColor" stroke-width="2"/></svg></div><div class="icon-label" data-i18n-key="form.sportOptions.1.label">Basketball</div></div>
+          <div class="icon-tile"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 17c3-6 13-6 16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7 17v4M17 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div class="icon-label" data-i18n-key="form.sportOptions.2.label">Volleyball</div></div>
+          <div class="icon-tile"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17l10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="17" cy="7" r="3" stroke="currentColor" stroke-width="2"/></svg></div><div class="icon-label" data-i18n-key="form.sportOptions.3.label">Tennis</div></div>
+          <div class="icon-tile"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 21s-4-4-4-9a8 8 0 0 1 16 0c0 5-4 9-4 9" stroke="currentColor" stroke-width="2"/></svg></div><div class="icon-label" data-i18n-key="form.sportOptions.4.label">Swimming</div></div>
+          <div class="icon-tile"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 20l7-16 7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div class="icon-label" data-i18n-key="form.sportOptions.5.label">Athletics</div></div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="maccabiah" aria-label="Maccabiah 2026">
       <div class="container grid-2">
         <div>
-          <h3 data-i18n-key="maccabiah.heading" class="section-heading">Maccabiah 2026</h3>
-          <p data-i18n-key="maccabiah.text" class="section-text"></p>
+          <h3 data-i18n-key="maccabiah.heading" class="section-title">Maccabiah 2026</h3>
+          <p data-i18n-key="maccabiah.text" class="section-sub"></p>
           <ul class="bullets" aria-label="Maccabiah highlights">
             <li data-i18n-key="maccabiah.items.0"></li>
             <li data-i18n-key="maccabiah.items.1"></li>
@@ -100,8 +107,8 @@
           </ul>
         </div>
         <div class="card" id="why-belarus" aria-label="Why it matters for Belarus">
-          <h3 data-i18n-key="whyBelarus.heading" class="section-heading" style="font-size:22px">Why it matters for Belarus</h3>
-          <p data-i18n-key="whyBelarus.text" class="section-text"></p>
+          <h3 data-i18n-key="whyBelarus.heading" class="section-title" style="font-size:22px">Why it matters for Belarus</h3>
+          <p data-i18n-key="whyBelarus.text" class="section-sub"></p>
           <ul class="bullets" aria-label="Why it matters list">
             <li data-i18n-key="whyBelarus.items.0"></li>
             <li data-i18n-key="whyBelarus.items.1"></li>
@@ -111,36 +118,27 @@
       </div>
     </section>
 
-    <section class="section" id="sponsors" aria-label="Partners and sponsors">
+    <section class="section alt" id="sponsors" aria-label="Partners and sponsors">
       <div class="container">
-        <h3 data-i18n-key="sponsors.heading" class="section-heading">Partners & sponsors</h3>
-        <p data-i18n-key="sponsors.text" class="section-text"></p>
-        <div class="grid-2" style="margin-top:18px">
-          <div class="card">
-            <ul class="bullets" aria-label="Partner benefits">
-              <li data-i18n-key="sponsors.benefits.0"></li>
-              <li data-i18n-key="sponsors.benefits.1"></li>
-              <li data-i18n-key="sponsors.benefits.2"></li>
-              <li data-i18n-key="sponsors.benefits.3"></li>
-              <li data-i18n-key="sponsors.benefits.4"></li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3 class="section-heading" style="font-size:22px">CTA</h3>
-            <p class="section-text">—</p>
-            <div class="hero-actions" style="margin-top:14px">
-              <a class="btn btn-primary" href="#form" data-i18n-key="hero.ctaPrimary">Apply</a>
-            </div>
-          </div>
+        <h3 data-i18n-key="sponsors.heading" class="section-title">Partners & sponsors</h3>
+        <p data-i18n-key="sponsors.text" class="section-sub"></p>
+        <div class="card" style="margin-top:18px">
+          <ul class="bullets" aria-label="Partner benefits">
+            <li data-i18n-key="sponsors.benefits.0"></li>
+            <li data-i18n-key="sponsors.benefits.1"></li>
+            <li data-i18n-key="sponsors.benefits.2"></li>
+            <li data-i18n-key="sponsors.benefits.3"></li>
+            <li data-i18n-key="sponsors.benefits.4"></li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section class="section" id="form" aria-label="Join form">
       <div class="container">
-        <h3 class="section-heading" data-i18n-key="form.heading">Join</h3>
-        <p class="section-text" data-i18n-key="form.text"></p>
-        <form class="form" id="contact-form" autocomplete="off" aria-label="Join form">
+        <h3 class="section-title" data-i18n-key="form.heading">Apply</h3>
+        <p class="section-sub" data-i18n-key="form.text"></p>
+        <form class="card form" id="contact-form" autocomplete="off" aria-label="Join form">
           <div class="field-group">
             <label for="name" data-i18n-key="form.nameLabel" id="name-label">Your name</label>
             <input type="text" id="name" name="name" required placeholder="" />
@@ -166,7 +164,7 @@
   <footer class="site-footer" aria-label="Footer">
     <div class="container footer-inner">
       <span data-i18n-key="footer.copy">© 2026 Maccabi Belarus</span>
-      <span style="opacity:.65">Draft</span>
+      <span style="opacity:.7">Draft</span>
     </div>
   </footer>
 
