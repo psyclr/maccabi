@@ -1,11 +1,14 @@
 /* Basic, clean scaffold styling */
 :root{
-  --bg: #f6f7fb;
-  --fg: #111;
-  --muted: #555;
-  --brand: #1e88e5;
+  /* Palette inspired by https://www.maccabi.org/ */
+  --bg: #ffffff;
+  --fg: #2c327c; /* MWU deep blue */
+  --muted: #515252;
+  --brand: #2c327c; /* primary */
+  --brand-2: #0fb3e1; /* cyan accent */
+  --brand-3: #c8af7f; /* gold accent */
   --card: #ffffff;
-  --border: rgba(17,17,17,.10);
+  --border: rgba(44,50,124,.14);
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;}
