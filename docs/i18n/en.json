@@ -1,0 +1,89 @@
+{
+  "languageName": "English",
+  "title": "Maccabi Belarus",
+  "subtitle": "Official national team project",
+  "hero": {
+    "heading": "Maccabi Belarus — the national team within the global Maccabi movement",
+    "text": "We bring together athletes, volunteers, and partners to represent Belarus internationally and prepare for Maccabiah 2026.",
+    "ctaPrimary": "Apply",
+    "ctaSecondary": "Become a partner"
+  },
+  "maccabiBelarus": {
+    "heading": "Maccabi Belarus",
+    "text": "Maccabi Belarus is a national team and a long‑term sports and cultural project initiated by the Jewish Religious Association in the Republic of Belarus.\n\nOur goal is to build a strong, sustainable national presence within the Maccabi movement and open the path to international participation for athletes of all nationalities."
+  },
+  "globalLink": {
+    "heading": "Part of the global Maccabi movement",
+    "text": "We are connected with Maccabi World Union and share the values of fair play, respect, and mutual support.\n\nThis gives access to international connections, participation standards, and the movement’s ecosystem of events."
+  },
+  "pillars": {
+    "heading": "Sport, identity, international participation",
+    "text": "The project is built on three pillars — so every participant has a clear pathway: from training and community to international competitions.",
+    "items": [
+      "Sport: selection, training, and teamwork across disciplines.",
+      "Identity: community, values, and respect for cultural diversity.",
+      "International participation: tournaments, exchange of experience, and representing Belarus."
+    ]
+  },
+  "worldUnion": {
+    "heading": "Maccabi World Union",
+    "text": "Maccabi World Union is the largest international Jewish sports organization. It unites hundreds of thousands of members worldwide and supports national teams and clubs.",
+    "metrics": [
+      { "value": "1921", "label": "Founded" },
+      { "value": "400,000+", "label": "Members" },
+      { "value": "70+", "label": "Countries" }
+    ]
+  },
+  "maccabiah": {
+    "heading": "Maccabiah 2026",
+    "text": "Maccabiah is the second-largest sports event in the world after the Olympic Games. It takes place every four years in Israel and brings together tens of thousands of athletes from 80+ countries.",
+    "items": [
+      "A unique format: competitions for both professionals and amateurs of all ages.",
+      "A global platform: sport, health, and shared values in one event.",
+      "A meaningful goal for Belarus: international visibility and a strong motivator for youth development."
+    ]
+  },
+  "whyBelarus": {
+    "heading": "Why it matters for Belarus",
+    "text": "Maccabiah is more than sport — it is an international platform that increases visibility and creates opportunities for people and partners.",
+    "items": [
+      "International image: positioning Belarus as a modern, open country that respects cultural diversity; participation and victories become positive media stories.",
+      "Domestic development: a clear goal motivates young people to train consistently; the project is open to everyone and demonstrates social cohesion.",
+      "Economy and diplomacy: networking on an international stage and building bridges for humanitarian and business cooperation."
+    ]
+  },
+  "sponsors": {
+    "heading": "Partners & sponsors",
+    "text": "To achieve this ambitious goal, we invite partners and sponsors to collaborate. Any contribution is valuable and important for the development of the team and the movement.\n\nPartnering with Maccabi Belarus is a long‑term commitment with clear social and reputational value.",
+    "benefits": [
+      "Association with the international sports movement Maccabi World Union.",
+      "Participation in a respected global project with history and reputation.",
+      "Support for sport, youth, and a healthy lifestyle.",
+      "Contribution to a positive international image of Belarus.",
+      "Public acknowledgement: logo on training uniform and the website, mentions in social media and PR integrations."
+    ]
+  },
+  "form": {
+    "heading": "Apply to the team",
+    "text": "Leave your application — we will get back to you with the next step. If you choose “Other”, please specify your sport.",
+    "nameLabel": "Your name",
+    "sportLabel": "Sport",
+    "sportOptions": [
+      { "value": "football", "label": "Football" },
+      { "value": "basketball", "label": "Basketball" },
+      { "value": "volleyball", "label": "Volleyball" },
+      { "value": "tennis", "label": "Tennis" },
+      { "value": "swimming", "label": "Swimming" },
+      { "value": "athletics", "label": "Athletics" },
+      { "value": "martial_arts", "label": "Martial arts" },
+      { "value": "other", "label": "Other" }
+    ],
+    "otherLabel": "Specify your sport",
+    "otherPlaceholder": "For example: fencing, esports, chess…",
+    "submitLabel": "Submit",
+    "thankYou": "Thank you, {name}! We received your application and will contact you soon."
+  },
+  "footer": {
+    "copy": "© 2026 Maccabi Belarus"
+  }
+}

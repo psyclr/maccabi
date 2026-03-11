@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n-key="title">Maccabi Belarus</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1 data-i18n-key="title" class="brand-title">Maccabi Belarus</h1>
+      <p data-i18n-key="subtitle" class="brand-subtitle">Official national team project</p>
+    </div>
+    <div class="lang-switch" aria-label="Language switch">
+      <button id="lang-en" class="lang-btn" title="English">EN</button>
+      <button id="lang-ru" class="lang-btn" title="Русский">RU</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="hero" aria-label="Hero">
+      <h2 data-i18n-key="hero.heading" class="hero-heading">Maccabi Belarus</h2>
+      <p data-i18n-key="hero.text" class="hero-text"></p>
+      <div class="hero-actions" aria-label="Hero actions">
+        <a class="btn" href="#form" data-i18n-key="hero.ctaPrimary">Join</a>
+        <a class="btn btn-outline" href="#sponsors" data-i18n-key="hero.ctaSecondary">Become a partner</a>
+      </div>
+    </section>
+
+    <section class="about" id="maccabi-belarus" aria-label="Maccabi Belarus">
+      <h3 data-i18n-key="maccabiBelarus.heading" class="section-heading">Maccabi Belarus</h3>
+      <p data-i18n-key="maccabiBelarus.text" class="section-text"></p>
+    </section>
+
+    <section class="about" id="global-link" aria-label="Global link">
+      <h3 data-i18n-key="globalLink.heading" class="section-heading">Part of the global movement</h3>
+      <p data-i18n-key="globalLink.text" class="section-text"></p>
+    </section>
+
+    <section class="about" id="pillars" aria-label="Sport identity international participation">
+      <h3 data-i18n-key="pillars.heading" class="section-heading">Sport, identity, international participation</h3>
+      <p data-i18n-key="pillars.text" class="section-text"></p>
+      <ul class="bullets" aria-label="Pillars list">
+        <li data-i18n-key="pillars.items.0"></li>
+        <li data-i18n-key="pillars.items.1"></li>
+        <li data-i18n-key="pillars.items.2"></li>
+      </ul>
+    </section>
+
+    <section class="about" id="world-union" aria-label="Maccabi World Union">
+      <h3 data-i18n-key="worldUnion.heading" class="section-heading">Maccabi World Union</h3>
+      <p data-i18n-key="worldUnion.text" class="section-text"></p>
+      <div class="metrics" aria-label="Maccabi World Union metrics">
+        <div class="metric">
+          <div class="metric-value" data-i18n-key="worldUnion.metrics.0.value">1921</div>
+          <div class="metric-label" data-i18n-key="worldUnion.metrics.0.label">Founded</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value" data-i18n-key="worldUnion.metrics.1.value">400,000+</div>
+          <div class="metric-label" data-i18n-key="worldUnion.metrics.1.label">Members</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value" data-i18n-key="worldUnion.metrics.2.value">70+</div>
+          <div class="metric-label" data-i18n-key="worldUnion.metrics.2.label">Countries</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="maccabiah" aria-label="Maccabiah 2026">
+      <h3 data-i18n-key="maccabiah.heading" class="section-heading">Maccabiah 2026</h3>
+      <p data-i18n-key="maccabiah.text" class="section-text"></p>
+      <ul class="bullets" aria-label="Maccabiah highlights">
+        <li data-i18n-key="maccabiah.items.0"></li>
+        <li data-i18n-key="maccabiah.items.1"></li>
+        <li data-i18n-key="maccabiah.items.2"></li>
+      </ul>
+    </section>
+
+    <section class="about" id="why-belarus" aria-label="Why it matters for Belarus">
+      <h3 data-i18n-key="whyBelarus.heading" class="section-heading">Why it matters for Belarus</h3>
+      <p data-i18n-key="whyBelarus.text" class="section-text"></p>
+      <ul class="bullets" aria-label="Why it matters list">
+        <li data-i18n-key="whyBelarus.items.0"></li>
+        <li data-i18n-key="whyBelarus.items.1"></li>
+        <li data-i18n-key="whyBelarus.items.2"></li>
+      </ul>
+    </section>
+
+    <section class="about" id="sponsors" aria-label="Partners and sponsors">
+      <h3 data-i18n-key="sponsors.heading" class="section-heading">Partners & sponsors</h3>
+      <p data-i18n-key="sponsors.text" class="section-text"></p>
+      <ul class="bullets" aria-label="Partner benefits">
+        <li data-i18n-key="sponsors.benefits.0"></li>
+        <li data-i18n-key="sponsors.benefits.1"></li>
+        <li data-i18n-key="sponsors.benefits.2"></li>
+        <li data-i18n-key="sponsors.benefits.3"></li>
+        <li data-i18n-key="sponsors.benefits.4"></li>
+      </ul>
+    </section>
+
+    <section class="form-section" id="form" aria-label="Join form">
+      <h3 class="section-heading" data-i18n-key="form.heading">Join</h3>
+      <p class="section-text" data-i18n-key="form.text"></p>
+      <form id="contact-form" autocomplete="off" aria-label="Join form">
+        <div class="field-group">
+          <label for="name" data-i18n-key="form.nameLabel" id="name-label">Your name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="field-group">
+          <label for="sport" data-i18n-key="form.sportLabel" id="sport-label">Sport</label>
+          <select id="sport" name="sport" required></select>
+        </div>
+
+        <div id="other-field" class="field-group" style="display:none;">
+          <label for="other-details" id="other-label" data-i18n-key="form.otherLabel">Please specify</label>
+          <input type="text" id="other-details" name="other-details" placeholder="" data-i18n-placeholder="form.otherPlaceholder" />
+        </div>
+
+        <button type="submit" id="submit-btn" data-i18n-key="form.submitLabel">Submit</button>
+      </form>
+      <div id="thank-you" class="hidden" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" aria-label="Footer">
+    <div class="container footer-inner">
+      <span data-i18n-key="footer.copy">© 2026 Maccabi Belarus</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
