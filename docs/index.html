@@ -39,13 +39,13 @@
         <p data-i18n-key="hero.text" class="hero-lead"></p>
 
         <div class="hero-actions" aria-label="Hero actions">
-          <a class="btn btn-primary" href="#form" data-i18n-key="hero.ctaPrimary">
+          <a class="btn btn-primary" href="#athlete-form" data-i18n-key="hero.ctaPrimary">
             <span data-i18n-key="hero.ctaPrimary">Apply</span>
             <span class="btn-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
           </a>
-          <a class="btn btn-secondary" href="#sponsors" data-i18n-key="hero.ctaSecondary">
+          <a class="btn btn-secondary" href="#partner-form" data-i18n-key="hero.ctaSecondary">
             <span data-i18n-key="hero.ctaSecondary">Become a partner</span>
           </a>
         </div>
@@ -134,29 +134,60 @@
       </div>
     </section>
 
-    <section class="section" id="form" aria-label="Join form">
+    <section class="section" id="athlete-form" aria-label="Athlete form">
       <div class="container">
         <h3 class="section-title" data-i18n-key="form.heading">Apply</h3>
         <p class="section-sub" data-i18n-key="form.text"></p>
-        <form class="card form" id="contact-form" autocomplete="off" aria-label="Join form">
+        <form class="card form" id="athlete-contact-form" autocomplete="off" aria-label="Athlete form">
           <div class="field-group">
-            <label for="name" data-i18n-key="form.nameLabel" id="name-label">Your name</label>
-            <input type="text" id="name" name="name" required placeholder="" />
+            <label for="athlete-name" data-i18n-key="form.nameLabel" id="athlete-name-label">Your name</label>
+            <input type="text" id="athlete-name" name="name" required placeholder="" />
           </div>
 
           <div class="field-group">
-            <label for="sport" data-i18n-key="form.sportLabel" id="sport-label">Sport</label>
-            <select id="sport" name="sport" required></select>
+            <label for="athlete-sport" data-i18n-key="form.sportLabel" id="athlete-sport-label">Sport</label>
+            <select id="athlete-sport" name="sport" required></select>
           </div>
 
-          <div id="other-field" class="field-group" style="display:none;">
-            <label for="other-details" id="other-label" data-i18n-key="form.otherLabel">Please specify</label>
-            <input type="text" id="other-details" name="other-details" placeholder="" data-i18n-placeholder="form.otherPlaceholder" />
+          <div id="athlete-other-field" class="field-group" style="display:none;">
+            <label for="athlete-other-details" id="athlete-other-label" data-i18n-key="form.otherLabel">Please specify</label>
+            <input type="text" id="athlete-other-details" name="other-details" placeholder="" data-i18n-placeholder="form.otherPlaceholder" />
           </div>
 
-          <button type="submit" id="submit-btn" data-i18n-key="form.submitLabel">Submit</button>
+          <button type="submit" id="athlete-submit-btn" data-i18n-key="form.submitLabel">Submit</button>
         </form>
-        <div id="thank-you" class="hidden" aria-live="polite"></div>
+        <div id="athlete-thank-you" class="hidden" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="partner-form" aria-label="Partner form">
+      <div class="container">
+        <h3 class="section-title" data-i18n-key="partnerForm.heading">Partner</h3>
+        <p class="section-sub" data-i18n-key="partnerForm.text"></p>
+        <form class="card form" id="partner-contact-form" autocomplete="off" aria-label="Partner form">
+          <div class="field-group">
+            <label for="partner-name" data-i18n-key="partnerForm.nameLabel">Name</label>
+            <input type="text" id="partner-name" name="name" required data-i18n-placeholder="partnerForm.namePlaceholder" placeholder="" />
+          </div>
+
+          <div class="field-group">
+            <label for="partner-org" data-i18n-key="partnerForm.orgLabel">Organisation</label>
+            <input type="text" id="partner-org" name="org" data-i18n-placeholder="partnerForm.orgPlaceholder" placeholder="" />
+          </div>
+
+          <div class="field-group">
+            <label for="partner-contact" data-i18n-key="partnerForm.contactLabel">Contact</label>
+            <input type="text" id="partner-contact" name="contact" required data-i18n-placeholder="partnerForm.contactPlaceholder" placeholder="" />
+          </div>
+
+          <div class="field-group">
+            <label for="partner-message" data-i18n-key="partnerForm.messageLabel">Message</label>
+            <input type="text" id="partner-message" name="message" data-i18n-placeholder="partnerForm.messagePlaceholder" placeholder="" />
+          </div>
+
+          <button type="submit" id="partner-submit-btn" data-i18n-key="partnerForm.submitLabel">Send</button>
+        </form>
+        <div id="partner-thank-you" class="hidden" aria-live="polite"></div>
       </div>
     </section>
   </main>

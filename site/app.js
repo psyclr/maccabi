@@ -70,10 +70,10 @@
     ];
   }
 
-  function showOrHideOther() {
-    const sportSel = document.getElementById("sport");
-    const otherField = document.getElementById("other-field");
-    const otherDetails = document.getElementById("other-details");
+  function showOrHideOther(prefix = "") {
+    const sportSel = document.getElementById(`${prefix}sport`);
+    const otherField = document.getElementById(`${prefix}other-field`);
+    const otherDetails = document.getElementById(`${prefix}other-details`);
     if (!sportSel || !otherField || !otherDetails) return;
 
     const show = sportSel.value === "other";
@@ -82,9 +82,9 @@
     if (!show) otherDetails.value = "";
   }
 
-  function populateSportOptions(loaded) {
+  function populateSportOptions(loaded, prefix = "") {
     const t = loaded ? loaded : translations[currentLang] || {};
-    const sportSel = document.getElementById("sport");
+    const sportSel = document.getElementById(`${prefix}sport`);
     if (!sportSel) return;
 
     const currentValue = sportSel.value;
@@ -106,7 +106,7 @@
       sportSel.value = currentValue;
     }
 
-    showOrHideOther();
+    showOrHideOther(prefix);
   }
 
   function loadLocale(lang) {
@@ -116,7 +116,7 @@
 
     if (translations[lang]) {
       applyTranslations(translations[lang]);
-      populateSportOptions();
+      populateSportOptions(null, "athlete-");
       return;
     }
 
@@ -125,7 +125,7 @@
       .then((obj) => {
         translations[lang] = obj;
         applyTranslations(obj);
-        populateSportOptions(obj);
+        populateSportOptions(obj, "athlete-");
       })
       .catch(() => {
         console.error("Failed to load locale", lang);
@@ -147,28 +147,51 @@
 
   function initFormBehavior() {
     const form = document.getElementById("contact-form");
-    const sportSel = document.getElementById("sport");
-    const thankYouDiv = document.getElementById("thank-you");
-    if (!form || !sportSel || !thankYouDiv) return;
+    const athleteForm = document.getElementById("athlete-contact-form");
+    const athleteSportSel = document.getElementById("athlete-sport");
+    const athleteThankYouDiv = document.getElementById("athlete-thank-you");
 
-    sportSel.addEventListener("change", showOrHideOther);
+    if (athleteForm && athleteSportSel && athleteThankYouDiv) {
+      athleteSportSel.addEventListener("change", () => showOrHideOther("athlete-"));
 
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const name =
-        document.getElementById("name").value.trim() ||
-        (currentLang === "ru" ? "Гость" : "Guest");
-      const t = translations[currentLang] || {};
+      athleteForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name =
+          document.getElementById("athlete-name").value.trim() ||
+          (currentLang === "ru" ? "Гость" : "Guest");
+        const t = translations[currentLang] || {};
 
-      const template =
-        (t.form && t.form.thankYou) ||
-        t.thankYou ||
-        "Thank you, {name}!";
-      thankYouDiv.textContent = format(template, { name });
-      thankYouDiv.classList.remove("hidden");
-      form.classList.add("hidden");
-      thankYouDiv.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+        const template =
+          (t.form && t.form.thankYou) ||
+          t.thankYou ||
+          "Thank you, {name}!";
+        athleteThankYouDiv.textContent = format(template, { name });
+        athleteThankYouDiv.classList.remove("hidden");
+        athleteForm.classList.add("hidden");
+        athleteThankYouDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+
+    const partnerForm = document.getElementById("partner-contact-form");
+    const partnerThankYouDiv = document.getElementById("partner-thank-you");
+
+    if (partnerForm && partnerThankYouDiv) {
+      partnerForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name =
+          document.getElementById("partner-name").value.trim() ||
+          (currentLang === "ru" ? "Гость" : "Guest");
+        const t = translations[currentLang] || {};
+
+        const template =
+          (t.partnerForm && t.partnerForm.thankYou) ||
+          "Thank you, {name}!";
+        partnerThankYouDiv.textContent = format(template, { name });
+        partnerThankYouDiv.classList.remove("hidden");
+        partnerForm.classList.add("hidden");
+        partnerThankYouDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
   }
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -178,6 +201,9 @@
     if (ruBtn) ruBtn.addEventListener("click", () => loadLocale("ru"));
 
     initFormBehavior();
+
+    // Populate athlete sports select once DOM is ready (locale may load async)
+    populateSportOptions(null, "athlete-");
 
     loadLocale("en");
     preloadLocale("ru");

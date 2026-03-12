@@ -64,10 +64,10 @@
     ]
   },
   "form": {
-    "heading": "Apply to the team",
-    "text": "Leave your application — we will get back to you with the next step. If you choose “Other”, please specify your sport.",
+    "heading": "Join the team",
+    "text": "For athletes who want to join one of the sports disciplines. If you choose “Other”, please specify your sport.",
     "nameLabel": "Your name",
-    "sportLabel": "Sport",
+    "sportLabel": "Sport discipline",
     "sportOptions": [
       { "value": "football", "label": "Football" },
       { "value": "basketball", "label": "Basketball" },
@@ -80,8 +80,22 @@
     ],
     "otherLabel": "Specify your sport",
     "otherPlaceholder": "For example: fencing, esports, chess…",
-    "submitLabel": "Submit",
+    "submitLabel": "Send application",
     "thankYou": "Thank you, {name}! We received your application and will contact you soon."
+  },
+  "partnerForm": {
+    "heading": "Become a partner",
+    "text": "For sponsors and partners who want to support the project. Leave your contact details — we will reach out.",
+    "nameLabel": "Your name",
+    "namePlaceholder": "John Doe",
+    "orgLabel": "Organisation (optional)",
+    "orgPlaceholder": "Company / foundation",
+    "contactLabel": "Contact (email or phone)",
+    "contactPlaceholder": "name@example.com or +375…",
+    "messageLabel": "Message (optional)",
+    "messagePlaceholder": "How would you like to support the team?",
+    "submitLabel": "Send",
+    "thankYou": "Thank you, {name}! We received your message and will contact you soon."
   },
   "footer": {
     "copy": "© 2026 Maccabi Belarus"
