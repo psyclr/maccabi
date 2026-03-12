@@ -23,13 +23,8 @@
   <main>
     <section class="hero" id="hero" aria-label="Hero">
       <div class="hero-media" aria-hidden="true">
-        <!-- Reference-style background video. Can be replaced later. -->
-        <iframe
-          title="Background video"
-          src="https://www.youtube.com/embed/Qrym1Lk3c1Q?autoplay=1&mute=1&controls=0&playsinline=1&loop=1&playlist=Qrym1Lk3c1Q&modestbranding=1&rel=0"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-        ></iframe>
+        <!-- Auto background (no play button, no YouTube overlays). -->
+        <div class="hero-media-bg"></div>
       </div>
       <div class="hero-overlay" aria-hidden="true"></div>
 
@@ -156,7 +151,7 @@
 
           <button type="submit" id="athlete-submit-btn" data-i18n-key="form.submitLabel">Submit</button>
         </form>
-        <div id="athlete-thank-you" class="hidden" aria-live="polite"></div>
+        <div id="athlete-thank-you" class="hidden thank-you" aria-live="polite"></div>
       </div>
     </section>
 
@@ -182,12 +177,12 @@
 
           <div class="field-group">
             <label for="partner-message" data-i18n-key="partnerForm.messageLabel">Message</label>
-            <input type="text" id="partner-message" name="message" data-i18n-placeholder="partnerForm.messagePlaceholder" placeholder="" />
+            <textarea id="partner-message" name="message" rows="4" data-i18n-placeholder="partnerForm.messagePlaceholder" placeholder=""></textarea>
           </div>
 
           <button type="submit" id="partner-submit-btn" data-i18n-key="partnerForm.submitLabel">Send</button>
         </form>
-        <div id="partner-thank-you" class="hidden" aria-live="polite"></div>
+        <div id="partner-thank-you" class="hidden thank-you" aria-live="polite"></div>
       </div>
     </section>
   </main>
