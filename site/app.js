@@ -194,26 +194,12 @@
     }
   }
 
-  function initHeroPlaceholder() {
-    const iframe = document.querySelector(".hero-media iframe");
-    const ph = document.querySelector(".hero-media-placeholder");
-    if (!iframe || !ph) return;
-
-    // If iframe loads, fade placeholder out.
-    const hide = () => ph.classList.add("is-hidden");
-    iframe.addEventListener("load", hide, { once: true });
-
-    // Safety: hide anyway after a short delay to avoid blocking the hero.
-    setTimeout(hide, 1600);
-  }
-
   document.addEventListener("DOMContentLoaded", () => {
     const enBtn = document.getElementById("lang-en");
     const ruBtn = document.getElementById("lang-ru");
     if (enBtn) enBtn.addEventListener("click", () => loadLocale("en"));
     if (ruBtn) ruBtn.addEventListener("click", () => loadLocale("ru"));
 
-    initHeroPlaceholder();
     initFormBehavior();
 
     // Populate athlete sports select once DOM is ready (locale may load async)
