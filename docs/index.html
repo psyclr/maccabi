@@ -45,7 +45,8 @@
   <main>
     <section class="hero" id="hero" aria-label="Hero">
       <div class="hero-media" aria-hidden="true">
-        <!-- Reference-style background video. -->
+        <div class="hero-media-fallback"></div>
+        <!-- Reference-style background video (desktop/tablet). On some mobile browsers YouTube can show overlays. -->
         <iframe
           title="Background video"
           src="https://www.youtube-nocookie.com/embed/Qrym1Lk3c1Q?autoplay=1&mute=1&controls=0&playsinline=1&loop=1&playlist=Qrym1Lk3c1Q&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1"
