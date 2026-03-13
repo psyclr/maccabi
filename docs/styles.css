@@ -211,6 +211,4 @@ textarea{min-height: 120px; resize: vertical}
   .metrics{grid-template-columns: 1fr}
   .icon-grid{grid-template-columns: 1fr}
 
-  /* Mobile Safari/Chrome can show YouTube safety overlays inside iframe. Hide video on mobile. */
-  .hero-media iframe{display:none}
 }
