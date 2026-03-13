@@ -41,8 +41,12 @@
     const enBtn = document.getElementById("lang-en");
     const ruBtn = document.getElementById("lang-ru");
     if (!enBtn || !ruBtn) return;
-    enBtn.classList.toggle("lang-btn-active", currentLang === "en");
-    ruBtn.classList.toggle("lang-btn-active", currentLang === "ru");
+    const enActive = currentLang === "en";
+    const ruActive = currentLang === "ru";
+    enBtn.classList.toggle("lang-btn-active", enActive);
+    ruBtn.classList.toggle("lang-btn-active", ruActive);
+    enBtn.setAttribute("aria-pressed", enActive ? "true" : "false");
+    ruBtn.setAttribute("aria-pressed", ruActive ? "true" : "false");
   }
 
   function defaultSportOptions(lang) {

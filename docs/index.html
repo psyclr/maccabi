@@ -14,8 +14,8 @@
         <p data-i18n-key="subtitle" class="nav-sub">Official national team project</p>
       </div>
       <div class="lang-switch" aria-label="Language switch">
-        <button id="lang-en" class="lang-btn" title="English">EN</button>
-        <button id="lang-ru" class="lang-btn" title="Русский">RU</button>
+        <button id="lang-en" class="lang-btn" title="English" aria-pressed="true">EN</button>
+        <button id="lang-ru" class="lang-btn" title="Русский" aria-pressed="false">RU</button>
       </div>
     </div>
   </header>
@@ -34,7 +34,7 @@
       <div class="hero-overlay" aria-hidden="true"></div>
 
       <div class="container hero-inner">
-        <div class="hero-kicker"><span class="hero-kicker-dot"></span><span>Maccabi World Union</span></div>
+        <div class="hero-kicker"><span class="hero-kicker-dot"></span><span data-i18n-key="hero.kicker">Maccabi World Union</span></div>
         <h2 data-i18n-key="hero.heading" class="hero-title">Maccabi Belarus</h2>
         <p data-i18n-key="hero.text" class="hero-lead"></p>
 
@@ -141,7 +141,7 @@
         <form class="card form" id="athlete-contact-form" autocomplete="off" aria-label="Athlete form">
           <div class="field-group">
             <label for="athlete-name" data-i18n-key="form.nameLabel" id="athlete-name-label">Your name</label>
-            <input type="text" id="athlete-name" name="name" required placeholder="" />
+            <input type="text" id="athlete-name" name="name" required data-i18n-placeholder="form.namePlaceholder" placeholder="" />
           </div>
 
           <div class="field-group">
@@ -177,7 +177,7 @@
 
           <div class="field-group">
             <label for="partner-contact" data-i18n-key="partnerForm.contactLabel">Contact</label>
-            <input type="text" id="partner-contact" name="contact" required data-i18n-placeholder="partnerForm.contactPlaceholder" placeholder="" />
+            <input type="email" id="partner-contact" name="contact" required data-i18n-placeholder="partnerForm.contactPlaceholder" placeholder="" />
           </div>
 
           <div class="field-group">

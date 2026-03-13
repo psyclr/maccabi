@@ -3,6 +3,7 @@
   "title": "Maccabi Belarus",
   "subtitle": "Official national team project",
   "hero": {
+    "kicker": "Maccabi World Union",
     "heading": "Maccabi Belarus — the national team within the global Maccabi movement",
     "text": "We bring together athletes, volunteers, and partners to represent Belarus internationally and prepare for Maccabiah 2026.",
     "ctaPrimary": "Apply",
@@ -67,6 +68,7 @@
     "heading": "Join the team",
     "text": "For athletes who want to join one of the sports disciplines. If you choose “Other”, please specify your sport.",
     "nameLabel": "Your name",
+    "namePlaceholder": "John Doe",
     "sportLabel": "Sport discipline",
     "sportOptions": [
       { "value": "football", "label": "Football" },
